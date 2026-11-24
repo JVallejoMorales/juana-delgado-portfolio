@@ -309,6 +309,7 @@ h1 em {
 }
 
 .work {
+  --page-width: 90rem;
   padding-block: var(--section-space);
   border-block: 1px solid var(--line);
 }
@@ -327,13 +328,9 @@ h1 em {
   color: var(--muted);
 }
 
-.work .shell {
-  max-width: 60rem;
-}
-
 .reel-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1rem, 2.3vw, 1.8rem);
 }
 
@@ -347,6 +344,7 @@ h1 em {
 }
 
 .reel-copy {
+  flex-grow: 1;
   padding: 1.3rem 1.35rem 1.15rem;
 }
 
@@ -373,7 +371,6 @@ h1 em {
 
 .reel-link {
   align-self: flex-start;
-  margin-top: auto;
   margin-inline: 1.35rem;
   margin-bottom: .65rem;
 }
@@ -451,6 +448,12 @@ h1 em {
 
 .site-footer {
   border-top: 1px solid var(--line);
+}
+
+@media (max-width: 72rem) {
+  .reel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 57rem) {
